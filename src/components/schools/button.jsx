@@ -13,7 +13,6 @@ import FIN from '../../assets/images/escuelas/FIN.png';
 import ICO from '../../assets/images/escuelas/ICO.png';
 import MEE from '../../assets/images/escuelas/MEE.png';
 import MKT from '../../assets/images/escuelas/MKT.png';
-import { Link } from '@mui/material';
 const images = [
   {
     url: ADM,
@@ -71,7 +70,8 @@ const images = [
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
-  height: 600,
+  height: 400,
+  borderRadius: '10px',
   [theme.breakpoints.down('sm')]: {
     width: '100% !important', // Overrides inline-style
     height: 100,
@@ -86,6 +86,7 @@ const ImageButton = styled(ButtonBase)(({ theme }) => ({
     },
     '& .MuiTypography-root': {
       border: '8px solid currentColor',
+      color: 'white',
     },
   },
 }));
@@ -135,17 +136,18 @@ const ImageMarked = styled('span')(({ theme }) => ({
 
 export default function ButtonBases() {
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 600, width: '100%' }}>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 600, width: '100%', justifyContent: 'center', alignItems: 'center', spacing: 2 }}>  
       {images.map((image) => (
 
         <ImageButton
-          focusRipple
+          
           key={image.title}
           style={{
             width: image.width,
-            margin: 'auto auto auto auto',
+            margin: '2%',
+            borderRadius: '10px',
+
           }}
-          marginBottom="20px"
         >
           <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
           <ImageBackdrop className="MuiImageBackdrop-root" />
@@ -158,6 +160,8 @@ export default function ButtonBases() {
                 p: 4,
                 pt: 2,
                 fontSize: '1.5rem',
+                bgcolor: 'rgba(0, 0, 5, 0.8)',
+                borderRadius: '10px',
                 pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
               }}
             >
