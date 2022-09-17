@@ -17,6 +17,7 @@ export default function Dti() {
         height: '100%',
         backgroundColor: 'rgba(0,183,0,0.4)',
         borderRadius: '20px',
+        padding: '2rem',
         
         }}>
             <ButtonDti />

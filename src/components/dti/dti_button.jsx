@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
 import DTI from '../../assets/images/escuelas/DTI.png';
+import Paper from '@mui/material/Paper';
 const image = [
   {
     url: DTI,
@@ -17,8 +18,8 @@ const ImageButton = styled(ButtonBase)(({ theme }) => ({
   height: 500,
   borderRadius: '10px',
   [theme.breakpoints.down('sm')]: {
-    width: '100% !important', // Overrides inline-style
-    height: 100,
+    width: '50% !important', // Overrides inline-style
+    height: 400,
   },
   '&:hover, &.Mui-focusVisible': {
     zIndex: 1,
@@ -43,6 +44,8 @@ const ImageSrc = styled('span')({
   bottom: 0,
   backgroundSize: 'cover',
   backgroundPosition: 'center 40%',
+  borderRadius: '10px',
+  border: '15px solid #00b700',
 });
 
 const Image = styled('span')(({ theme }) => ({
@@ -55,6 +58,8 @@ const Image = styled('span')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'center',
   color: theme.palette.common.white,
+  borderRadius: '10px',
+  border: '15px solid #00b700',
 }));
 
 const ImageBackdrop = styled('span')(({ theme }) => ({
@@ -66,6 +71,8 @@ const ImageBackdrop = styled('span')(({ theme }) => ({
   backgroundColor: theme.palette.common.black,
   opacity: 0.4,
   transition: theme.transitions.create('opacity'),
+  borderRadius: '10px',
+  border: '15px solid #00b700',
 }));
 
 const ImageMarked = styled('span')(({ theme }) => ({
@@ -76,11 +83,13 @@ const ImageMarked = styled('span')(({ theme }) => ({
   bottom: -2,
   left: 'calc(50% - 9px)',
   transition: theme.transitions.create('opacity'),
+ 
 }));
 
 export default function ButtonBases() {
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 600, width: '100%', justifyContent: 'center', alignItems: 'center', spacing: 2 }}>  
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 600, width: '100%', justifyContent: 'center', alignItems: 'center', spacing: 2,
+    }}>  
 
         <ImageButton
           
@@ -88,7 +97,8 @@ export default function ButtonBases() {
           style={{
             width: '30%',
             margin: '2%',
-            borderRadius: '10px',
+            elevation: 24,
+            
 
           }}
         >
