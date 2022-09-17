@@ -1,12 +1,11 @@
-import React from "react"
-import buttonImage from "../components/schools/button"
-export const Schools = () => {
-    
+import React from 'react';
+import Button from '../components/schools/button';
+const Schools = () => {
     return (
         <div>
-        <buttonImage />
+        <h1>Schools</h1>
+        <Button />
         </div>
-    )
+    );
     }
-    
-
+export default Schools

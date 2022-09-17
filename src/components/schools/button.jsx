@@ -3,28 +3,75 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
-
+import ADM from '../../assets/images/escuelas/ADM.png';
+import COM from '../../assets/images/escuelas/COM.png';
+import CSJ from '../../assets/images/escuelas/CSJ.png';
+import DIS from '../../assets/images/escuelas/DIS.png';
+import DTI from '../../assets/images/escuelas/DTI.png';
+import EIE from '../../assets/images/escuelas/EIE.png';
+import FIN from '../../assets/images/escuelas/FIN.png';
+import ICO from '../../assets/images/escuelas/ICO.png';
+import MEE from '../../assets/images/escuelas/MEE.png';
+import MKT from '../../assets/images/escuelas/MKT.png';
+import { Link } from '@mui/material';
 const images = [
   {
-    url: '/assets/images/escuelas/ADM.png',
-    title: 'Breakfast',
-    width: '40%',
+    url: ADM,
+    title: 'Administración',
+    width: '30%',
+    height: '30%',
+  
   },
   {
-    url: '/assets/images/escuelas/ADM.png',
-    title: 'Burgers',
+    url: COM,
+    title: 'Comunicación',
     width: '30%',
   },
   {
-    url: '/assets/images/escuelas/ADM.png',
-    title: 'Camera',
+    url: CSJ,
+    title: 'CSJ',
+    width: '30%',
+  },
+  {
+    url: DIS,
+    title: 'Diseño',
+    width: '30%',
+  },
+  {
+    url: DTI,
+    title: 'DTI',
+    width: '30%',
+  },
+  {
+    url: EIE,
+    title: 'EIE',
+    width: '30%',
+  },
+  {
+    url: FIN,
+    title: 'FIN',
+    width: '30%',
+  },
+  {
+    url: ICO,
+    title: 'ICO',
+    width: '30%',
+  },
+  {
+    url: MEE,
+    title: 'MEE',
+    width: '30%',
+  },
+  {
+    url: MKT,
+    title: 'MKT',
     width: '30%',
   },
 ];
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
-  height: 200,
+  height: 600,
   [theme.breakpoints.down('sm')]: {
     width: '100% !important', // Overrides inline-style
     height: 100,
@@ -38,7 +85,7 @@ const ImageButton = styled(ButtonBase)(({ theme }) => ({
       opacity: 0,
     },
     '& .MuiTypography-root': {
-      border: '4px solid currentColor',
+      border: '8px solid currentColor',
     },
   },
 }));
@@ -88,26 +135,29 @@ const ImageMarked = styled('span')(({ theme }) => ({
 
 export default function ButtonBases() {
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 600, width: '100%' }}>
       {images.map((image) => (
+
         <ImageButton
           focusRipple
           key={image.title}
           style={{
             width: image.width,
+            margin: 'auto auto auto auto',
           }}
+          marginBottom="20px"
         >
           <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
           <ImageBackdrop className="MuiImageBackdrop-root" />
           <Image>
             <Typography
               component="span"
-              variant="subtitle1"
               color="inherit"
               sx={{
                 position: 'relative',
                 p: 4,
                 pt: 2,
+                fontSize: '1.5rem',
                 pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
               }}
             >
