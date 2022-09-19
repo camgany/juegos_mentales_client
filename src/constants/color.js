@@ -1,0 +1,23 @@
+const colors = {
+
+    ico: '#F87F00',
+    ico_background:'rgba(252, 130, 2 ,0.4)', 
+    com: '#750100',
+    com_background:'rgba(117, 1, 0 ,0.4)',
+    dti: '#00b700',
+    dti_background:'rgba(0, 183, 0 ,0.4)',
+    eie: '#0081b8',
+    eie_background:'rgba(0, 129, 184 ,0.4)',
+    fin: '#005700',
+    fin_background:'rgba(0, 87, 0 ,0.4)',
+    mkt: '#f70000',
+    mkt_background:'rgba(247, 0, 0 ,0.4)',
+    mee: '#ECE21E',
+    mee_background:'rgba(236, 226, 30 ,0.4)',
+    dis: '#66298a',
+    dis_background:'rgba(102, 41, 138 ,0.4)',
+    adm: '#000000',
+    adm_background:'rgba(0, 0, 0 ,0.4)',
+    csj: '#000000',
+    csj_background:'rgba(0, 0, 0 ,0.4)',
+};
